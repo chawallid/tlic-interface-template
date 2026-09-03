@@ -34,6 +34,7 @@ export const dictionary = {
   "nav.group.foundations": { en: "Foundations", th: "พื้นฐาน" },
   "nav.group.components": { en: "Components", th: "คอมโพเนนต์" },
   "nav.group.patterns": { en: "Patterns", th: "รูปแบบ" },
+  "nav.group.about": { en: "About", th: "เกี่ยวกับ" },
 
   /* ---- Navigation items ---- */
   "nav.overview": { en: "Overview", th: "ภาพรวม" },
@@ -47,6 +48,7 @@ export const dictionary = {
   "nav.feedback": { en: "Feedback", th: "การตอบสนอง" },
   "nav.layouts": { en: "Layout Examples", th: "ตัวอย่างเลย์เอาต์" },
   "nav.prompts": { en: "Prompt Templates", th: "พรอมป์เทมเพลต" },
+  "nav.changelog": { en: "Changelog", th: "การเปลี่ยนแปลง" },
 
   /* ---- Common UI ---- */
   "ui.search": { en: "Search components…", th: "ค้นหาคอมโพเนนต์…" },
@@ -145,6 +147,13 @@ export const dictionary = {
   "page.prompts.desc": {
     en: "Pick a template, fill in your project, and copy a ready-to-run prompt that points an AI agent at this repository.",
     th: "เลือกรูปแบบ ใส่รายละเอียดโปรเจกต์ แล้วคัดลอก prompt ที่พร้อมใช้ ซึ่งชี้ให้ AI agent มาอ้างอิง repository นี้",
+  },
+
+  /* ---- Page: Changelog ---- */
+  "page.changelog.title": { en: "Changelog", th: "บันทึกการเปลี่ยนแปลง" },
+  "page.changelog.desc": {
+    en: "What changed in each release of this design system, newest first.",
+    th: "สรุปสิ่งที่เปลี่ยนแปลงในแต่ละเวอร์ชันของดีไซน์ซิสเต็มนี้ เรียงจากใหม่ไปเก่า",
   },
 } satisfies Record<string, Entry>;
 

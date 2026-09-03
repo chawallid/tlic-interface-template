@@ -24,6 +24,18 @@ A shared component library plus **11 showcase pages**, each with a title, descri
 | 10 | **Layout Examples** (`/layouts`) | Framed Dashboard / Settings / Login / Profile / Mobile previews |
 | 11 | **Prompt Templates** (`/prompts`) | Pick Bootstrap or Retrofit, fill in your project, copy a ready-to-run prompt |
 
+Plus **Changelog** (`/changelog`) — the release history, reachable from the version badge in the sidebar.
+
+### 🏷️ Cutting a release
+
+[`lib/release.ts`](lib/release.ts) is the single source of truth for the version and the release notes:
+
+1. Bump `APP_VERSION` and prepend a release entry (bilingual EN / ไทย).
+2. Match `version` in `package.json`.
+3. Mirror the entry in [`CHANGELOG.md`](CHANGELOG.md).
+
+The sidebar badge and `/changelog` both read from that file, so they can never drift apart.
+
 ---
 
 ## 🚀 Getting started

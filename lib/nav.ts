@@ -11,6 +11,7 @@ import {
   BellRing,
   PanelsTopLeft,
   Sparkles,
+  History,
 } from "lucide-react";
 import type { TranslationKey } from "./i18n";
 
@@ -52,6 +53,10 @@ export const navGroups: NavGroup[] = [
       { labelKey: "nav.layouts", href: "/layouts", icon: PanelsTopLeft },
       { labelKey: "nav.prompts", href: "/prompts", icon: Sparkles },
     ],
+  },
+  {
+    titleKey: "nav.group.about",
+    items: [{ labelKey: "nav.changelog", href: "/changelog", icon: History }],
   },
 ];
 
