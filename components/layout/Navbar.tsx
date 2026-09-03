@@ -62,7 +62,7 @@ export function Navbar({ onMenuClick }: { onMenuClick: () => void }) {
           <span className="absolute right-2.5 top-2.5 size-2 rounded-full bg-accent-500 ring-2 ring-surface" />
         </button>
         <div className="ml-1 hidden sm:block">
-          <Avatar name="Nattapong Wong" accent="primary" size="sm" status="active" />
+          <Avatar name="Jane Cooper" accent="primary" size="sm" status="active" />
         </div>
       </div>
     </header>

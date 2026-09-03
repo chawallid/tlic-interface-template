@@ -46,6 +46,7 @@ export const dictionary = {
   "nav.dataDisplay": { en: "Data Display", th: "การแสดงข้อมูล" },
   "nav.feedback": { en: "Feedback", th: "การตอบสนอง" },
   "nav.layouts": { en: "Layout Examples", th: "ตัวอย่างเลย์เอาต์" },
+  "nav.prompts": { en: "Prompt Templates", th: "พรอมป์เทมเพลต" },
 
   /* ---- Common UI ---- */
   "ui.search": { en: "Search components…", th: "ค้นหาคอมโพเนนต์…" },
@@ -137,6 +138,13 @@ export const dictionary = {
   "page.layouts.desc": {
     en: "Real page compositions built from the system — dashboard, settings, login, profile, and a mobile-first view.",
     th: "หน้าเว็บจริงที่ประกอบจากระบบนี้ — แดชบอร์ด ตั้งค่า เข้าสู่ระบบ โปรไฟล์ และมุมมองแบบ mobile-first",
+  },
+
+  /* ---- Page: Prompt templates ---- */
+  "page.prompts.title": { en: "Prompt Templates", th: "พรอมป์เทมเพลต" },
+  "page.prompts.desc": {
+    en: "Pick a template, fill in your project, and copy a ready-to-run prompt that points an AI agent at this repository.",
+    th: "เลือกรูปแบบ ใส่รายละเอียดโปรเจกต์ แล้วคัดลอก prompt ที่พร้อมใช้ ซึ่งชี้ให้ AI agent มาอ้างอิง repository นี้",
   },
 } satisfies Record<string, Entry>;
 

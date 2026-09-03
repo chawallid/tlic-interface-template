@@ -30,10 +30,10 @@ export default function FormsPage() {
         <Section title="Text inputs" description="Labels, hints, icons, and helper text via the FormField wrapper.">
           <div className="grid gap-5 rounded-xl border border-border bg-surface p-6 shadow-card sm:grid-cols-2">
             <FormField label="Full name" htmlFor="f-name" hint="As it appears on certificates">
-              <Input id="f-name" placeholder="Nattapong Wong" leftIcon={<User />} />
+              <Input id="f-name" placeholder="Jane Cooper" leftIcon={<User />} />
             </FormField>
             <FormField label="Email address" htmlFor="f-email">
-              <Input id="f-email" type="email" placeholder="you@cmu.ac.th" leftIcon={<Mail />} />
+              <Input id="f-email" type="email" placeholder="you@example.com" leftIcon={<Mail />} />
             </FormField>
             <FormField label="Password" htmlFor="f-pass" hint="At least 8 characters">
               <PasswordInput id="f-pass" placeholder="••••••••" />
@@ -113,7 +113,7 @@ export default function FormsPage() {
               <Input id="v2" value="Read-only value" disabled readOnly />
             </FormField>
             <FormField label="Error" htmlFor="v3" error="This username is already taken">
-              <Input id="v3" defaultValue="nattapong" invalid />
+              <Input id="v3" defaultValue="jane.cooper" invalid />
             </FormField>
             <FormField
               label="Live email validation"
@@ -124,7 +124,7 @@ export default function FormsPage() {
               <Input
                 id="v4"
                 type="email"
-                placeholder="you@cmu.ac.th"
+                placeholder="you@example.com"
                 value={email}
                 invalid={invalid}
                 onChange={(e) => setEmail(e.target.value)}

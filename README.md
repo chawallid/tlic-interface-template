@@ -8,7 +8,7 @@ The brand palette is derived directly from the TLIC logo: **T = blue/navy**, **L
 
 ## ✨ What's inside
 
-A shared component library plus **10 showcase pages**, each with a title, description, and live examples:
+A shared component library plus **11 showcase pages**, each with a title, description, and live examples:
 
 | # | Page | Highlights |
 |---|------|-----------|
@@ -22,6 +22,7 @@ A shared component library plus **10 showcase pages**, each with a title, descri
 | 8 | **Data Display** (`/data-display`) | Table + pagination, badges, avatars, progress, empty state |
 | 9 | **Feedback** (`/feedback`) | Alerts, toasts, modal, confirm dialog, skeletons |
 | 10 | **Layout Examples** (`/layouts`) | Framed Dashboard / Settings / Login / Profile / Mobile previews |
+| 11 | **Prompt Templates** (`/prompts`) | Pick Bootstrap or Retrofit, fill in your project, copy a ready-to-run prompt |
 
 ---
 

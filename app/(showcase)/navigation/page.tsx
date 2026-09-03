@@ -134,7 +134,7 @@ export default function NavigationPage() {
                   <Bell size={18} />
                   <span className="absolute right-2 top-2 size-1.5 rounded-full bg-accent-500" />
                 </span>
-                <Avatar name="Nattapong Wong" accent="primary" size="sm" status="active" />
+                <Avatar name="Jane Cooper" accent="primary" size="sm" status="active" />
               </div>
             </div>
           </div>

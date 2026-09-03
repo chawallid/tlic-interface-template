@@ -72,7 +72,7 @@ export function DashboardPreview() {
           <div className="ml-auto hidden items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-1.5 text-xs text-text-subtle sm:flex">
             <Search size={14} /> Search…
           </div>
-          <Avatar name="Nattapong Wong" accent="primary" size="sm" status="active" />
+          <Avatar name="Jane Cooper" accent="primary" size="sm" status="active" />
         </header>
 
         <main className="flex-1 space-y-4 p-4">
@@ -165,15 +165,15 @@ export function SettingsPreview() {
           <div className="rounded-xl border border-border bg-surface p-5 shadow-card">
             <p className="text-sm font-semibold text-text">Profile</p>
             <div className="mt-4 flex items-center gap-4">
-              <Avatar name="Nattapong Wong" accent="primary" size="lg" />
+              <Avatar name="Jane Cooper" accent="primary" size="lg" />
               <Button variant="outline" size="sm">Change photo</Button>
             </div>
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <FormField label="Full name" htmlFor="s-name">
-                <Input id="s-name" defaultValue="Nattapong Wong" />
+                <Input id="s-name" defaultValue="Jane Cooper" />
               </FormField>
               <FormField label="Email" htmlFor="s-email">
-                <Input id="s-email" defaultValue="nattapong.w@cmu.ac.th" />
+                <Input id="s-email" defaultValue="jane.cooper@example.edu" />
               </FormField>
             </div>
           </div>
@@ -204,7 +204,7 @@ export function LoginPreview() {
   return (
     <div className="grid min-h-[600px] lg:grid-cols-2">
       <div className="hidden flex-col justify-between bg-brand-gradient p-10 text-white lg:flex">
-        <Logo size="md" mono="white" />
+        <Logo size="md" mono="white" className="self-start" />
         <div>
           <p className="text-2xl font-bold leading-snug">
             Innovate how the world learns.
@@ -226,7 +226,7 @@ export function LoginPreview() {
 
           <div className="mt-6 space-y-4">
             <FormField label="Email" htmlFor="l-email">
-              <Input id="l-email" type="email" placeholder="you@cmu.ac.th" defaultValue="nattapong.w@cmu.ac.th" />
+              <Input id="l-email" type="email" placeholder="you@example.com" defaultValue="jane.cooper@example.edu" />
             </FormField>
             <FormField label="Password" htmlFor="l-pass">
               <PasswordInput id="l-pass" placeholder="••••••••" defaultValue="password" />
@@ -267,10 +267,10 @@ export function ProfilePreview() {
       <div className="px-5 pb-6 sm:px-8">
         <div className="-mt-10 flex flex-col gap-4 sm:flex-row sm:items-end">
           <div className="rounded-full ring-4 ring-surface">
-            <Avatar name="Ploychompoo Sri" accent="secondary" size="xl" />
+            <Avatar name="Esther Howard" accent="secondary" size="xl" />
           </div>
           <div className="flex-1">
-            <h1 className="text-xl font-bold text-text">Ploychompoo Sri</h1>
+            <h1 className="text-xl font-bold text-text">Esther Howard</h1>
             <p className="text-sm text-text-muted">Content Producer · TLIC, Chiang Mai University</p>
           </div>
           <div className="flex gap-2">
@@ -341,10 +341,10 @@ export function MobilePreview() {
     <div className="flex min-h-full flex-col">
       <header className="sticky top-0 z-10 flex items-center justify-between bg-surface/90 px-4 pb-3 pt-7 backdrop-blur">
         <div className="flex items-center gap-2.5">
-          <Avatar name="Nattapong Wong" accent="primary" size="sm" />
+          <Avatar name="Jane Cooper" accent="primary" size="sm" />
           <div>
             <p className="text-xs text-text-muted">Good morning</p>
-            <p className="text-sm font-semibold text-text">Nattapong</p>
+            <p className="text-sm font-semibold text-text">Jane</p>
           </div>
         </div>
         <span className="relative inline-flex size-9 items-center justify-center rounded-lg text-text-muted">
