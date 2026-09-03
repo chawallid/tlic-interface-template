@@ -106,11 +106,11 @@ export type Person = {
 };
 
 export const team: Person[] = [
-  { id: "u1", name: "Nattapong Wong", email: "nattapong.w@cmu.ac.th", role: "Instructional Designer", accent: "primary", status: "active" },
-  { id: "u2", name: "Ploychompoo Sri", email: "ploychompoo.s@cmu.ac.th", role: "Content Producer", accent: "secondary", status: "active" },
-  { id: "u3", name: "Kittisak Meesuk", email: "kittisak.m@cmu.ac.th", role: "Platform Engineer", accent: "accent", status: "pending" },
-  { id: "u4", name: "Aticha Rattana", email: "aticha.r@cmu.ac.th", role: "Learning Analyst", accent: "success", status: "active" },
-  { id: "u5", name: "Somchai Boonmee", email: "somchai.b@cmu.ac.th", role: "Faculty Liaison", accent: "warning", status: "completed" },
+  { id: "u1", name: "Jane Cooper", email: "jane.cooper@example.edu", role: "Instructional Designer", accent: "primary", status: "active" },
+  { id: "u2", name: "Esther Howard", email: "esther.howard@example.edu", role: "Content Producer", accent: "secondary", status: "active" },
+  { id: "u3", name: "Cameron Williamson", email: "cameron.williamson@example.edu", role: "Platform Engineer", accent: "accent", status: "pending" },
+  { id: "u4", name: "Jenny Wilson", email: "jenny.wilson@example.edu", role: "Learning Analyst", accent: "success", status: "active" },
+  { id: "u5", name: "Robert Fox", email: "robert.fox@example.edu", role: "Faculty Liaison", accent: "warning", status: "completed" },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -129,13 +129,13 @@ export type Enrollment = {
 };
 
 export const enrollments: Enrollment[] = [
-  { id: "#EN-4821", learner: "Nattapong Wong", email: "nattapong.w@cmu.ac.th", course: "Designing Digital Learning", progress: 100, status: "completed", enrolledOn: "Jun 2, 2026", accent: "primary" },
-  { id: "#EN-4822", learner: "Ploychompoo Sri", email: "ploychompoo.s@cmu.ac.th", course: "Data Literacy for Educators", progress: 68, status: "active", enrolledOn: "Jun 6, 2026", accent: "secondary" },
-  { id: "#EN-4823", learner: "Kittisak Meesuk", email: "kittisak.m@cmu.ac.th", course: "AI in the Classroom", progress: 12, status: "pending", enrolledOn: "Jun 9, 2026", accent: "accent" },
-  { id: "#EN-4824", learner: "Aticha Rattana", email: "aticha.r@cmu.ac.th", course: "Assessment & Rubrics", progress: 45, status: "active", enrolledOn: "Jun 11, 2026", accent: "success" },
-  { id: "#EN-4825", learner: "Somchai Boonmee", email: "somchai.b@cmu.ac.th", course: "Building MOOCs", progress: 0, status: "failed", enrolledOn: "Jun 12, 2026", accent: "warning" },
-  { id: "#EN-4826", learner: "Waraporn Chai", email: "waraporn.c@cmu.ac.th", course: "Interactive Video Design", progress: 100, status: "completed", enrolledOn: "Jun 14, 2026", accent: "primary" },
-  { id: "#EN-4827", learner: "Thanawat Pho", email: "thanawat.p@cmu.ac.th", course: "Learning Analytics 101", progress: 82, status: "active", enrolledOn: "Jun 15, 2026", accent: "secondary" },
+  { id: "#EN-4821", learner: "Jane Cooper", email: "jane.cooper@example.edu", course: "Designing Digital Learning", progress: 100, status: "completed", enrolledOn: "Jun 2, 2026", accent: "primary" },
+  { id: "#EN-4822", learner: "Esther Howard", email: "esther.howard@example.edu", course: "Data Literacy for Educators", progress: 68, status: "active", enrolledOn: "Jun 6, 2026", accent: "secondary" },
+  { id: "#EN-4823", learner: "Cameron Williamson", email: "cameron.williamson@example.edu", course: "AI in the Classroom", progress: 12, status: "pending", enrolledOn: "Jun 9, 2026", accent: "accent" },
+  { id: "#EN-4824", learner: "Jenny Wilson", email: "jenny.wilson@example.edu", course: "Assessment & Rubrics", progress: 45, status: "active", enrolledOn: "Jun 11, 2026", accent: "success" },
+  { id: "#EN-4825", learner: "Robert Fox", email: "robert.fox@example.edu", course: "Building MOOCs", progress: 0, status: "failed", enrolledOn: "Jun 12, 2026", accent: "warning" },
+  { id: "#EN-4826", learner: "Kristin Watson", email: "kristin.watson@example.edu", course: "Interactive Video Design", progress: 100, status: "completed", enrolledOn: "Jun 14, 2026", accent: "primary" },
+  { id: "#EN-4827", learner: "Devon Lane", email: "devon.lane@example.edu", course: "Learning Analytics 101", progress: 82, status: "active", enrolledOn: "Jun 15, 2026", accent: "secondary" },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -174,10 +174,10 @@ export type ActivityItem = {
 };
 
 export const activity: ActivityItem[] = [
-  { id: "a1", actor: "Ploychompoo Sri", action: "published", target: "Data Literacy for Educators", time: "10 min ago", accent: "secondary" },
-  { id: "a2", actor: "Aticha Rattana", action: "commented on", target: "Assessment & Rubrics", time: "42 min ago", accent: "success" },
-  { id: "a3", actor: "Nattapong Wong", action: "completed", target: "Designing Digital Learning", time: "2 hours ago", accent: "primary" },
-  { id: "a4", actor: "Kittisak Meesuk", action: "updated", target: "Platform release v2.4", time: "5 hours ago", accent: "accent" },
+  { id: "a1", actor: "Esther Howard", action: "published", target: "Data Literacy for Educators", time: "10 min ago", accent: "secondary" },
+  { id: "a2", actor: "Jenny Wilson", action: "commented on", target: "Assessment & Rubrics", time: "42 min ago", accent: "success" },
+  { id: "a3", actor: "Jane Cooper", action: "completed", target: "Designing Digital Learning", time: "2 hours ago", accent: "primary" },
+  { id: "a4", actor: "Cameron Williamson", action: "updated", target: "Platform release v2.4", time: "5 hours ago", accent: "accent" },
 ];
 
 /* -------------------------------------------------------------------------- */

@@ -63,7 +63,7 @@ export default function OverviewPage() {
               <Sparkles size={13} />
               {t("brand.university")}
             </span>
-            <h1 className="mt-5 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h1 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
               {t("page.overview.heroTitle")}
             </h1>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base">

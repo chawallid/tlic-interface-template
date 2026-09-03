@@ -105,8 +105,8 @@ export default function CardsPage() {
         <Section title="Profile card" description="A person summary with stats and actions.">
           <Card className="mx-auto max-w-sm">
             <div className="flex flex-col items-center p-6 text-center">
-              <Avatar name="Ploychompoo Sri" accent="secondary" size="xl" status="active" />
-              <h3 className="mt-4 text-lg font-semibold text-text">Ploychompoo Sri</h3>
+              <Avatar name="Esther Howard" accent="secondary" size="xl" status="active" />
+              <h3 className="mt-4 text-lg font-semibold text-text">Esther Howard</h3>
               <p className="text-sm text-text-muted">Content Producer · TLIC</p>
               <p className="mt-1 flex items-center gap-1 text-xs text-text-subtle">
                 <MapPin size={12} /> Chiang Mai, Thailand

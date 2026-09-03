@@ -109,10 +109,10 @@ export default function FeedbackPage() {
                 focus handling, and Escape-to-close.
               </p>
               <div className="flex items-center gap-3 rounded-lg border border-border bg-surface-2 p-3">
-                <Avatar name="Aticha Rattana" accent="success" size="sm" />
+                <Avatar name="Jenny Wilson" accent="success" size="sm" />
                 <div className="text-sm">
-                  <p className="font-medium text-text">Aticha Rattana</p>
-                  <p className="text-text-muted">aticha.r@cmu.ac.th</p>
+                  <p className="font-medium text-text">Jenny Wilson</p>
+                  <p className="text-text-muted">jenny.wilson@example.edu</p>
                 </div>
               </div>
             </div>
@@ -146,9 +146,9 @@ export default function FeedbackPage() {
             ) : (
               <div className="rounded-xl border border-border bg-surface p-5 shadow-card">
                 <div className="flex items-center gap-3">
-                  <Avatar name="Nattapong Wong" accent="primary" />
+                  <Avatar name="Jane Cooper" accent="primary" />
                   <div>
-                    <p className="text-sm font-medium text-text">Nattapong Wong</p>
+                    <p className="text-sm font-medium text-text">Jane Cooper</p>
                     <p className="text-xs text-text-muted">Instructional Designer</p>
                   </div>
                 </div>
