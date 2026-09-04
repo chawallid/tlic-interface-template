@@ -25,10 +25,35 @@ export type Release = {
 };
 
 /** Current version — keep in sync with package.json. */
-export const APP_VERSION = "1.1.0";
+export const APP_VERSION = "1.2.0";
 
 /** Newest first. The first entry is treated as the current release. */
 export const releases: Release[] = [
+  {
+    version: "1.2.0",
+    date: "2026-09-03",
+    summary: {
+      en: "A marketplace page for showing off work built with the system, driven by a single data file.",
+      th: "เพิ่มหน้ามาร์เก็ตเพลสสำหรับแสดงผลงานที่สร้างด้วยระบบนี้ โดยอ่านข้อมูลจากไฟล์เดียว",
+    },
+    changes: [
+      {
+        kind: "added",
+        en: "Marketplace page (/marketplace) — a gallery of sample work with category and tag filters, search, a detail dialog, and shareable #id links.",
+        th: "หน้ามาร์เก็ตเพลส (/marketplace) — แกลเลอรีตัวอย่างผลงาน พร้อมตัวกรองหมวดหมู่และแท็ก ช่องค้นหา กล่องรายละเอียด และลิงก์ #id ที่ส่งต่อได้",
+      },
+      {
+        kind: "added",
+        en: "lib/marketplace.ts — the catalogue behind that page. Adding a work is one entry in this file; the cards, filters, tags, and counts follow automatically.",
+        th: "ไฟล์ lib/marketplace.ts — คลังข้อมูลของหน้านั้น เพิ่มผลงานใหม่ด้วยการเพิ่มรายการเดียวในไฟล์นี้ แล้วการ์ด ตัวกรอง แท็ก และจำนวนจะอัปเดตตามเอง",
+      },
+      {
+        kind: "added",
+        en: "public/works/ for screenshots. A work without one falls back to a branded gradient placeholder, so it can be listed before its screenshot exists.",
+        th: "โฟลเดอร์ public/works/ สำหรับเก็บภาพหน้าจอ ผลงานที่ยังไม่มีภาพจะแสดงพื้นหลังกราเดียนต์ของแบรนด์แทน จึงลงรายการก่อนมีภาพได้",
+      },
+    ],
+  },
   {
     version: "1.1.0",
     date: "2026-09-03",

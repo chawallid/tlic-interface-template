@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); version
 > The user-facing version of this page lives at [`/changelog`](http://localhost:3000/changelog).
 > Both read from [`lib/release.ts`](lib/release.ts) — **update that file first**, then mirror it here.
 
+## [1.2.0] — 2026-09-03
+
+### Added
+- **Marketplace page** (`/marketplace`) — a gallery of sample work built with the system: category and tag filters, search, a detail dialog with highlights and links, and shareable `#id` deep links.
+- **`lib/marketplace.ts`** — the catalogue behind that page and the only file you touch to add a work. Cards, filters, tags, and counts all derive from it.
+- **`public/works/`** — where screenshots live. A work without one falls back to a branded gradient placeholder, so it can be listed before its screenshot exists.
+
 ## [1.1.0] — 2026-09-03
 
 ### Added

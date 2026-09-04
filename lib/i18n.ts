@@ -34,6 +34,7 @@ export const dictionary = {
   "nav.group.foundations": { en: "Foundations", th: "พื้นฐาน" },
   "nav.group.components": { en: "Components", th: "คอมโพเนนต์" },
   "nav.group.patterns": { en: "Patterns", th: "รูปแบบ" },
+  "nav.group.showcase": { en: "Showcase", th: "ผลงาน" },
   "nav.group.about": { en: "About", th: "เกี่ยวกับ" },
 
   /* ---- Navigation items ---- */
@@ -48,6 +49,7 @@ export const dictionary = {
   "nav.feedback": { en: "Feedback", th: "การตอบสนอง" },
   "nav.layouts": { en: "Layout Examples", th: "ตัวอย่างเลย์เอาต์" },
   "nav.prompts": { en: "Prompt Templates", th: "พรอมป์เทมเพลต" },
+  "nav.marketplace": { en: "Marketplace", th: "มาร์เก็ตเพลส" },
   "nav.changelog": { en: "Changelog", th: "การเปลี่ยนแปลง" },
 
   /* ---- Common UI ---- */
@@ -147,6 +149,13 @@ export const dictionary = {
   "page.prompts.desc": {
     en: "Pick a template, fill in your project, and copy a ready-to-run prompt that points an AI agent at this repository.",
     th: "เลือกรูปแบบ ใส่รายละเอียดโปรเจกต์ แล้วคัดลอก prompt ที่พร้อมใช้ ซึ่งชี้ให้ AI agent มาอ้างอิง repository นี้",
+  },
+
+  /* ---- Page: Marketplace ---- */
+  "page.marketplace.title": { en: "Marketplace", th: "มาร์เก็ตเพลส" },
+  "page.marketplace.desc": {
+    en: "A gallery of work built with this design system — filter by category or tag, and open any item for the details. New work is added from a single data file.",
+    th: "แกลเลอรีผลงานที่สร้างด้วยดีไซน์ซิสเต็มนี้ — กรองตามหมวดหมู่หรือแท็ก และเปิดดูรายละเอียดได้ทุกชิ้น เพิ่มผลงานใหม่ได้จากไฟล์ข้อมูลไฟล์เดียว",
   },
 
   /* ---- Page: Changelog ---- */
