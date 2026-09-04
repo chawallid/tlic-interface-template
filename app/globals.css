@@ -227,6 +227,94 @@
   background: transparent;
 }
 
+/* -----------------------------------------------------------------------------
+   Liquid glass — translucent, blurred surfaces that let the aurora backdrop
+   (see .aurora-blob below) show through. Layer .glass-* on top of colour,
+   never on a flat neutral background, or the refraction reads as flat.
+   -------------------------------------------------------------------------- */
+.glass {
+  background: color-mix(in oklab, var(--surface) 55%, transparent);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid color-mix(in oklab, white 35%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 50%, transparent),
+    var(--shadow-lg);
+}
+.dark .glass {
+  border-color: color-mix(in oklab, white 10%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 12%, transparent),
+    var(--shadow-lg);
+}
+.glass-strong {
+  background: color-mix(in oklab, var(--surface) 78%, transparent);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+}
+.glass-nav {
+  background: color-mix(in oklab, var(--surface) 65%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border-color: color-mix(in oklab, white 25%, transparent);
+}
+.dark .glass-nav {
+  border-color: color-mix(in oklab, white 8%, transparent);
+}
+
+/* Ambient colour field the glass panels refract — three brand-hued blobs,
+   fixed behind the whole app, drifting slowly. One orchestrated motion,
+   not per-element hover effects. */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.55;
+  animation: aurora-drift 26s ease-in-out infinite;
+}
+.dark .aurora-blob {
+  opacity: 0.35;
+}
+.aurora-blob--1 {
+  left: -10%;
+  top: -12%;
+  width: 32rem;
+  height: 32rem;
+  background: radial-gradient(circle, var(--primary-500), transparent 70%);
+}
+.aurora-blob--2 {
+  right: -8%;
+  top: 8%;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, var(--secondary-400), transparent 70%);
+  animation-delay: -8s;
+}
+.aurora-blob--3 {
+  left: 20%;
+  bottom: -18%;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(circle, var(--accent-400), transparent 70%);
+  animation-delay: -16s;
+}
+@keyframes aurora-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, -5%) scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob {
+    animation: none;
+  }
+}
+
 /* Signature TLIC multi-color gradient (blue → purple → coral) */
 .text-brand-gradient {
   background: linear-gradient(

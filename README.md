@@ -8,7 +8,7 @@ The brand palette is derived directly from the TLIC logo: **T = blue/navy**, **L
 
 ## ✨ What's inside
 
-A shared component library plus **11 showcase pages**, each with a title, description, and live examples:
+A shared component library plus **12 showcase pages**, each with a title, description, and live examples:
 
 | # | Page | Highlights |
 |---|------|-----------|
@@ -23,6 +23,40 @@ A shared component library plus **11 showcase pages**, each with a title, descri
 | 9 | **Feedback** (`/feedback`) | Alerts, toasts, modal, confirm dialog, skeletons |
 | 10 | **Layout Examples** (`/layouts`) | Framed Dashboard / Settings / Login / Profile / Mobile previews |
 | 11 | **Prompt Templates** (`/prompts`) | Pick Bootstrap or Retrofit, fill in your project, copy a ready-to-run prompt |
+| 12 | **Marketplace** (`/marketplace`) | A gallery of work built with the system — filter, search, open the details |
+
+Plus **Changelog** (`/changelog`) — the release history, reachable from the version badge in the sidebar.
+
+### 🛍️ Adding work to the marketplace
+
+[`lib/marketplace.ts`](lib/marketplace.ts) is the whole catalogue. To list a new piece of work:
+
+1. Drop a screenshot in [`public/works/`](public/works) — 16:9 (e.g. 1600×900) fits the card exactly.
+2. Append an entry to `works`. Only `id`, `title`, `summary`, and `category` are required:
+
+   ```ts
+   {
+     id: "my-project",
+     title: "My Project",
+     summary: { en: "One line about it.", th: "คำอธิบายสั้น ๆ" },
+     category: "web",
+     year: 2026,
+     image: "/works/my-project.png",
+     tags: ["Next.js", "Figma"],
+   }
+   ```
+
+The card, the category counts, the tag list, and the detail dialog all follow from that one entry — no other file changes. Leave `image` out and the card falls back to a branded gradient placeholder, so work can be listed before its screenshot exists. Adding a **category** is one entry in `workCategories` in the same file. The page also has a **Copy template** button that puts the snippet above on your clipboard.
+
+### 🏷️ Cutting a release
+
+[`lib/release.ts`](lib/release.ts) is the single source of truth for the version and the release notes:
+
+1. Bump `APP_VERSION` and prepend a release entry (bilingual EN / ไทย).
+2. Match `version` in `package.json`.
+3. Mirror the entry in [`CHANGELOG.md`](CHANGELOG.md).
+
+The sidebar badge and `/changelog` both read from that file, so they can never drift apart.
 
 ---
 
@@ -77,6 +111,7 @@ app/
     page.tsx            # Overview
     colors/ typography/ buttons/ forms/ cards/
     navigation/ data-display/ feedback/ layouts/
+    prompts/ marketplace/ changelog/
 components/
   ui/                   # 30+ reusable primitives (Button, Card, Input, Modal, …)
   layout/               # Sidebar, Navbar, AppShell, ThemeToggle, LanguageToggle, Logo
@@ -84,11 +119,14 @@ components/
 lib/
   design-tokens.ts      # TS source of truth for colors, type, spacing (powers Copy Tokens)
   mock-data.ts          # Learners, courses, enrollments, stats, notifications, pricing
+  marketplace.ts        # Catalogue behind /marketplace — add a work by adding an entry
   i18n.ts               # EN/TH dictionary + LanguageProvider + useLang()/t()
   nav.ts                # Sidebar navigation config
   utils.ts              # cn(), formatters, clipboard helper
 styles/
   tokens.css            # All design tokens as CSS custom properties (+ dark overrides)
+public/
+  works/                # Marketplace screenshots — see public/works/README.md
 ```
 
 ---

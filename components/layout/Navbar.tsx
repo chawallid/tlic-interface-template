@@ -24,7 +24,7 @@ export function Navbar({ onMenuClick }: { onMenuClick: () => void }) {
   const title = useCurrentTitle();
 
   return (
-    <header className="sticky top-0 z-20 flex h-16 items-center gap-3 border-b border-border bg-surface/85 px-4 backdrop-blur-md sm:px-6">
+    <header className="glass glass-nav sticky top-0 z-20 flex h-16 items-center gap-3 rounded-none border-x-0 border-t-0 px-4 sm:px-6">
       <button
         type="button"
         onClick={onMenuClick}

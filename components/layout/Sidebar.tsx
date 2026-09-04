@@ -6,6 +6,7 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLang } from "@/lib/i18n";
 import { navGroups } from "@/lib/nav";
+import { APP_VERSION } from "@/lib/release";
 import { Logo } from "./Logo";
 
 function isActive(pathname: string, href: string) {
@@ -87,14 +88,24 @@ function SidebarHeader({ onClose }: { onClose?: () => void }) {
   );
 }
 
-function SidebarFooter() {
+function SidebarFooter({ onNavigate }: { onNavigate?: () => void }) {
   const { t } = useLang();
   return (
     <div className="shrink-0 border-t border-border p-4">
-      <div className="rounded-xl bg-brand-gradient p-4 text-white">
+      {/* The version is the entry point to the changelog — see lib/release.ts. */}
+      <Link
+        href="/changelog"
+        onClick={onNavigate}
+        className="block rounded-xl bg-brand-gradient p-4 text-white transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+      >
         <p className="text-sm font-semibold">{t("brand.name")}</p>
-        <p className="mt-0.5 text-xs text-white/70">v1.0 · {t("brand.university")}</p>
-      </div>
+        <p className="mt-0.5 flex items-center gap-1.5 text-xs text-white/70">
+          <span className="rounded bg-white/15 px-1.5 py-0.5 font-medium text-white">
+            v{APP_VERSION}
+          </span>
+          {t("brand.university")}
+        </p>
+      </Link>
     </div>
   );
 }
@@ -108,7 +119,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   return (
     <>
       {/* Desktop — fixed rail */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-surface lg:flex">
+      <aside className="glass glass-nav fixed inset-y-0 left-0 z-30 hidden w-64 flex-col rounded-none lg:flex">
         <SidebarHeader />
         <SidebarNav />
         <SidebarFooter />
@@ -131,13 +142,13 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         />
         <aside
           className={cn(
-            "absolute inset-y-0 left-0 flex w-72 max-w-[85vw] flex-col border-r border-border bg-surface shadow-xl transition-transform duration-300 ease-out",
+            "glass glass-strong absolute inset-y-0 left-0 flex w-72 max-w-[85vw] flex-col rounded-none transition-transform duration-300 ease-out",
             open ? "translate-x-0" : "-translate-x-full"
           )}
         >
           <SidebarHeader onClose={onClose} />
           <SidebarNav onNavigate={onClose} />
-          <SidebarFooter />
+          <SidebarFooter onNavigate={onClose} />
         </aside>
       </div>
     </>
