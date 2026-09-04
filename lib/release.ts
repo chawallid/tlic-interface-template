@@ -25,10 +25,35 @@ export type Release = {
 };
 
 /** Current version — keep in sync with package.json. */
-export const APP_VERSION = "1.2.0";
+export const APP_VERSION = "1.3.0";
 
 /** Newest first. The first entry is treated as the current release. */
 export const releases: Release[] = [
+  {
+    version: "1.3.0",
+    date: "2026-09-04",
+    summary: {
+      en: "A liquid-glass treatment for the shell and overview page: frosted, translucent surfaces over a drifting brand-colour backdrop.",
+      th: "ปรับหน้าภาพรวมและเชลล์ให้เป็นสไตล์ liquid glass พื้นผิวโปร่งแสงแบบกระจกฝ้าบนพื้นหลังสีแบรนด์ที่ไหลช้าๆ",
+    },
+    changes: [
+      {
+        kind: "added",
+        en: "Glass surface utilities (.glass, .glass-strong, .glass-nav) — translucent, blurred panels with a soft highlight border, tuned for both light and dark mode.",
+        th: "ยูทิลิตี้พื้นผิวกระจก (.glass, .glass-strong, .glass-nav) — พาเนลโปร่งแสงเบลอพร้อมขอบไฮไลต์บาง รองรับทั้งโหมดสว่างและมืด",
+      },
+      {
+        kind: "added",
+        en: "An ambient aurora backdrop — three slow-drifting, brand-hued blurred blobs fixed behind the app shell, so the glass panels have colour to refract. Respects reduced-motion.",
+        th: "พื้นหลังแบบออโรร่า — ก้อนสีเบลอสามก้อนในโทนแบรนด์ที่ไหลช้าๆ อยู่หลังเชลล์ของแอป ทำให้พาเนลกระจกมีสีให้สะท้อน รองรับการลดการเคลื่อนไหว (reduced motion)",
+      },
+      {
+        kind: "changed",
+        en: "The sidebar, navbar, and the overview page's hero preview, brand tiles, feature cards, and dashboard-preview cards now use the glass surfaces instead of flat backgrounds.",
+        th: "แถบเมนู แถบนำทางด้านบน และการ์ดพรีวิว/กระเบื้องแบรนด์/การ์ดฟีเจอร์/การ์ดตัวอย่างแดชบอร์ดในหน้าภาพรวม เปลี่ยนมาใช้พื้นผิวกระจกแทนพื้นทึบ",
+      },
+    ],
+  },
   {
     version: "1.2.0",
     date: "2026-09-03",
