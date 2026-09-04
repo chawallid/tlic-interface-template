@@ -19,7 +19,14 @@ export function AppShell({ children }: { children: ReactNode }) {
   }, [pathname]);
 
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="min-h-dvh">
+      {/* Ambient colour field the glass surfaces refract — fixed, behind everything. */}
+      <div className="aurora" aria-hidden>
+        <div className="aurora-blob aurora-blob--1" />
+        <div className="aurora-blob aurora-blob--2" />
+        <div className="aurora-blob aurora-blob--3" />
+      </div>
+
       <Sidebar open={mobileOpen} onClose={() => setMobileOpen(false)} />
       <div className="lg:pl-64">
         <Navbar onMenuClick={() => setMobileOpen(true)} />

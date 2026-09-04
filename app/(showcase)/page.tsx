@@ -25,10 +25,10 @@ import { Progress } from "@/components/ui/Progress";
 import { Section } from "@/components/showcase/Section";
 
 const brandLetters = [
-  { letter: "T", word: "Teaching", color: "text-primary-600 dark:text-primary-400", bg: "bg-primary-50 dark:bg-primary-500/10" },
-  { letter: "L", word: "Learning", color: "text-secondary-500", bg: "bg-secondary-50 dark:bg-secondary-500/10" },
-  { letter: "I", word: "Innovation", color: "text-success-500", bg: "bg-success-50 dark:bg-success-500/10" },
-  { letter: "C", word: "Center", color: "text-accent-500", bg: "bg-accent-50 dark:bg-accent-500/10" },
+  { letter: "T", word: "Teaching", color: "text-primary-600 dark:text-primary-400" },
+  { letter: "L", word: "Learning", color: "text-secondary-500" },
+  { letter: "I", word: "Innovation", color: "text-success-500" },
+  { letter: "C", word: "Center", color: "text-accent-500" },
 ];
 
 const features = [
@@ -92,7 +92,7 @@ export default function OverviewPage() {
 
           {/* Floating component preview */}
           <div className="relative hidden lg:block">
-            <div className="ml-auto max-w-sm rounded-2xl border border-white/15 bg-white/95 p-5 shadow-xl backdrop-blur dark:bg-neutral-900/95">
+            <div className="glass glass-strong ml-auto max-w-sm rounded-2xl p-5">
               <div className="flex items-center justify-between">
                 <Logo size="md" />
                 <MoreHorizontal className="text-text-subtle" size={18} />
@@ -126,7 +126,7 @@ export default function OverviewPage() {
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {brandLetters.map((b) => (
-            <div key={b.letter} className={`rounded-xl border border-border p-5 ${b.bg}`}>
+            <div key={b.letter} className="glass rounded-xl p-5">
               <span className={`text-4xl font-extrabold ${b.color}`}>{b.letter}</span>
               <p className="mt-2 text-sm font-semibold text-text">{b.word}</p>
             </div>
@@ -141,8 +141,8 @@ export default function OverviewPage() {
             const Icon = f.icon;
             return (
               <Link key={f.key} href={f.href} className="group">
-                <Card interactive className="h-full p-5">
-                  <div className="flex size-11 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-100 dark:bg-primary-500/15 dark:text-primary-300">
+                <Card interactive className="glass h-full p-5">
+                  <div className="flex size-11 items-center justify-center rounded-lg bg-primary-500/15 text-primary-600 transition-colors group-hover:bg-primary-500/25 dark:text-primary-300">
                     <Icon size={22} />
                   </div>
                   <h3 className="mt-4 flex items-center gap-1 font-semibold text-text">
@@ -173,7 +173,7 @@ export default function OverviewPage() {
 
         <div className="mt-4 grid gap-4 lg:grid-cols-3">
           {/* Recent enrollments */}
-          <Card className="lg:col-span-2">
+          <Card className="glass lg:col-span-2">
             <CardHeader>
               <CardTitle>Recent enrollments</CardTitle>
               <CardDescription>Latest learners across all courses</CardDescription>
@@ -195,7 +195,7 @@ export default function OverviewPage() {
           </Card>
 
           {/* Activity */}
-          <Card>
+          <Card className="glass">
             <CardHeader>
               <CardTitle>Activity</CardTitle>
               <CardDescription>What the team is doing</CardDescription>

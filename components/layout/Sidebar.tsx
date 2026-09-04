@@ -119,7 +119,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   return (
     <>
       {/* Desktop — fixed rail */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-surface lg:flex">
+      <aside className="glass glass-nav fixed inset-y-0 left-0 z-30 hidden w-64 flex-col rounded-none lg:flex">
         <SidebarHeader />
         <SidebarNav />
         <SidebarFooter />
@@ -142,7 +142,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         />
         <aside
           className={cn(
-            "absolute inset-y-0 left-0 flex w-72 max-w-[85vw] flex-col border-r border-border bg-surface shadow-xl transition-transform duration-300 ease-out",
+            "glass glass-strong absolute inset-y-0 left-0 flex w-72 max-w-[85vw] flex-col rounded-none transition-transform duration-300 ease-out",
             open ? "translate-x-0" : "-translate-x-full"
           )}
         >
