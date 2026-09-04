@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); version
 > The user-facing version of this page lives at [`/changelog`](http://localhost:3000/changelog).
 > Both read from [`lib/release.ts`](lib/release.ts) — **update that file first**, then mirror it here.
 
+## [1.3.0] — 2026-09-04
+
+### Added
+- **Glass surface utilities** (`.glass`, `.glass-strong`, `.glass-nav`) — translucent, blurred panels with a soft highlight border, tuned for both light and dark mode.
+- **Ambient aurora backdrop** — three slow-drifting, brand-hued blurred blobs fixed behind the app shell, giving the glass panels colour to refract. Respects `prefers-reduced-motion`.
+
+### Changed
+- The sidebar, navbar, and the overview page's hero preview, brand tiles, feature cards, and dashboard-preview cards now use the glass surfaces instead of flat backgrounds.
+
 ## [1.2.0] — 2026-09-03
 
 ### Added
